@@ -1,3 +1,5 @@
+## instructions
+
 Upload the code to the Arduino board.
 
 Calibrate the system: Refer to the NAU7802 datasheet and load cell documentation for calibration procedures.

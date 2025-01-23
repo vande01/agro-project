@@ -1,3 +1,5 @@
+## Components
+
 [FireBeetle 2 ESP32-E](https://botland.store/img/art/inne/19015_7.jpg)
 
 [NAU7802 Precision ADC](https://cdn11.bigcommerce.com/s-3fd3md1ghs/images/stencil/500x659/products/35944/21010/NAU7802SGI-2__13030.1725094091.jpg?c=2)
