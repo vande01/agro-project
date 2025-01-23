@@ -1,4 +1,4 @@
-**Precision Plant Watering System**
+## Precision Plant Watering System
 
 **Overview**
 
