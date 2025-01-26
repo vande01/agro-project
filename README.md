@@ -22,6 +22,7 @@ Merges high-precision sensing technologies to provide   real-time insights into 
 Core Functionalities
 
 **Continuous weight measurement**
+
 Sensor calibration
 Automated irrigation response
 User-friendly digital interface
