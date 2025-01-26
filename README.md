@@ -1,6 +1,7 @@
 ## Precision Plant Watering System
 
 **Project Overview**
+
 Integrated Arduino-based platform combining precision weight measurement and automated irrigation management for advanced agricultural technology.
 
 **Key Components**
