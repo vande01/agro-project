@@ -18,6 +18,7 @@ OLED display for instant feedback
 Configurable sensor parameters for diverse agricultural environments
 
 **Technical Innovation**
+
 Merges high-precision sensing technologies to provide   real-time insights into crop weight,and irrigation needs, enabling data-driven agricultural management.
 Core Functionalities
 
