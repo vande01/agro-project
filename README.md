@@ -1,6 +1,6 @@
 ## Precision Plant Watering System
 
-![alt text](image-2.png)
+![alt text](image-3.png)
 
 **Project Overview**
 
