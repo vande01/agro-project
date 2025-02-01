@@ -1,6 +1,6 @@
 ## Precision Plant Watering System
 
-![Penguin Coding](https://i.pinimg.com/originals/e3/6d/4c/e36d4c77e0a9b3882f7be861c9e60833.gif | width=200)
+<img src="https://i.pinimg.com/originals/e3/6d/4c/e36d4c77e0a9b3882f7be861c9e60833.gif" width="200"/>
 
 **Project Overview**
 
