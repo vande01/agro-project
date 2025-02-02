@@ -191,11 +191,62 @@ void loop() {
     if (weight_gram < 50) {
         if (!send_message) {
             client.publish(mqtt_topic, "1");  // Send activation signal
-            delay(10*1000);                   // Wait 10 seconds
+            delay(10 * 1000);                 // Wait 10 seconds
             client.publish(mqtt_topic, "0");  // Send deactivation signal
         }
     }
 
-    // Wait for 24 hours before next reading
-    delay(60*60*60*24*1000);
+    // Wait for 3 minutes before next reading
+    delay(3 * 60 * 1000);  // Wait 3 minutes (3 minutes * 60 seconds * 1000 milliseconds)
+}
+
+
+
+
+
+שינוי מתחיל פה
+
+ void loop() {
+    delay(1000);  // Wait 1 second between readings
+    
+    // Wait for new reading to be available
+    while (!nau.available()) {
+        delay(1);
+    }
+    
+    // Read and convert weight measurement
+    int32_t val = nau.read();
+    float weight_gram;
+    weight_gram = val / 108;    // Apply calibration factor
+    weight_gram = weight_gram - 484;  // Apply offset correction
+    Serial.print("Read "); 
+    Serial.println(weight_gram);
+
+    // Update OLED display
+    static int counter = 0;
+    u8g2.clearBuffer();
+    u8g2.setFont(u8g2_font_ncenB08_tr);
+    u8g2.drawStr(3, 16, "weight:");
+    u8g2.drawStr(73, 16, String(weight_gram).c_str());
+    u8g2.sendBuffer();
+    
+    counter++;  // Increment display counter
+    
+    // Check and reconnect MQTT if necessary
+    if (!client.connected()) {
+        reconnect();
+    }
+    client.loop();  // Process MQTT messages
+
+    // Check if weight is below threshold
+    if (weight_gram < 50) {
+        if (!send_message) {
+            client.publish(mqtt_topic, "1");  // Send activation signal
+            delay(10 * 1000);                 // Wait 10 seconds
+            client.publish(mqtt_topic, "0");  // Send deactivation signal
+        }
+    }
+
+    // Wait for 3 minutes before next reading
+    delay(3 * 60 * 1000);  // Wait 3 minutes (3 minutes * 60 seconds * 1000 milliseconds)
 }
